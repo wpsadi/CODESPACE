@@ -1,0 +1,21 @@
+.todoCard{
+    display:flex;
+    justify-content:center;
+    gap:0.4em;
+    flex-direction:row;
+    place-items:center;
+    padding:2px 1px;
+    border:1px solid transparent
+}
+
+.todoCard> p{
+    max-width:1em;
+    min-width:0.6em;
+    font-size:1rem;
+}
+
+.todoCard-btn{
+    color:#fff;
+    text-align:center;
+    min-width:0.6em;
+}
