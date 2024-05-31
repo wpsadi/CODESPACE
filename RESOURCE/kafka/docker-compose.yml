@@ -1,0 +1,18 @@
+version : "3.1"
+
+services:
+  kafka:
+    image: confluentinc/cp-kafka
+    restart: always
+    ports:
+      - "9092:9092"
+    environment:
+      - KAFKA_ZOOKEEPER_CONNECT=192.168.1.6:2181
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://192.168.1.6:9092
+      - KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
+
+  zookeeper:
+    image: zookeeper
+    restart: always
+    ports:
+      - "2181:2181"
